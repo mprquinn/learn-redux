@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import { Link } from 'react-router';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
@@ -27,7 +27,7 @@ class Photo extends React.Component{
 					</p>
 
 					<div className="control-buttons">
-						<button className="likes">💖 {post.likes}</button>
+						<button onClick={this.props.increment.bind(null, index)} className="likes">💖 {post.likes}</button>
 						<Link className="button" to={`/view/${post.code}`}>
 							<span className="comment-count">
 								<span className="speech-bubble"></span>
